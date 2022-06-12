@@ -1,0 +1,17 @@
+.movies{
+   margin-top: 50px;
+}
+
+.movies__container{
+   display: grid;
+   justify-content:center;
+   align-content: center;
+   
+}
+
+.movies-list{
+   display: grid;
+   grid-template-columns: repeat(5,1fr);
+   column-gap: 50px;
+   row-gap: 50px;
+}

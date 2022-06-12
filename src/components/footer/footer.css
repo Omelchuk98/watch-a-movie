@@ -1,0 +1,37 @@
+.footer {
+   margin: 40px 0;
+}
+.footer__container {
+   display: flex;
+   width: 800px;
+   justify-content: space-around;
+   margin: 0 auto;
+}
+.footer__footer {
+   margin-top: 20px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+.footer__list {
+}
+.footer__item {
+   cursor: pointer;
+   font-weight: 400;
+}
+.copyright {
+   margin-left: 10px;
+}
+
+.footer__item:hover {
+   transition: width 0.5s ease;
+   color: black;
+}
+.footer__icons {
+   display: flex;
+   margin-right: 50px;
+   cursor: pointer;
+}
+.footer__icon:not(:last-child) {
+   margin-right: 20px;
+}
