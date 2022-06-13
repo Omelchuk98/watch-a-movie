@@ -1,0 +1,24 @@
+.movie-details{
+   margin-top: 50px;
+}
+
+
+.movie-details__container{
+   display: flex;
+   justify-content: space-around;
+   margin-top: 20px;
+}
+
+.movie-details__poster{
+   height: 500px;
+   width: 350px;
+   margin-right: 110px;
+}
+.poster_container{
+   word-wrap: break-word;
+   width: 350px;
+}
+.video_container{
+   word-wrap: break-word;
+   width: 800px;
+}
