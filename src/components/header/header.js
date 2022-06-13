@@ -15,7 +15,7 @@ const Header = () => {
             <nav className="header__menu">
                <div className="menu__list">
                   <NavLink to="home" className="menu__item">Home</NavLink>
-                  <NavLink to="movies" className="menu__item">Movies</NavLink>
+                  <NavLink to="movie" className="menu__item">Movies</NavLink>
                   <NavLink to="tv" className="menu__item">TV Shows</NavLink>
                </div>
             </nav>

@@ -5,3 +5,6 @@ export * from './footer/footer';
 export * from './tvshow/tvshow';
 export * from './tvshows/tvshows';
 export * from './spinner/spinner';
+export * from './single-actor/single-actor';
+export * from './carousel-home/carousel-home';
+export * from './carousel-card/carousel-card';

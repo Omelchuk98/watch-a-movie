@@ -1,0 +1,22 @@
+.actor-card{
+      border: 1px black solid;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      box-shadow: 0 4px 4px black;
+      max-width:150px;
+      height:440px;
+      background-color: rgb(102, 100, 100);
+    justify-content: center;
+    align-items: center;
+      
+}
+
+.actor-img{
+   width: 150px;
+   height: 220px;
+}
+
+.actor-card__name{
+   padding-left: 5px;
+   padding-right: 5px;
+}

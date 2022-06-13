@@ -34,6 +34,7 @@ const Footer = () => {
             <div className="footer__list">
                <Link to={'/'} className="footer__item">You must watch</Link>
                <Link to={'/'} className="footer__item">Recent release</Link>
+               <Link to={'/'} className="footer__item">Upcoming</Link>
                <a className="footer__item" onClick={() => openInNewTap(link.imdb)}>
                   Top IMDB
                </a>

@@ -15,7 +15,10 @@ const movieService = {
    originalImage: (imgPath) => `https://image.tmdb.org/t/p/original/${imgPath}`,
    w500Image: (imgPath) => `https://image.tmdb.org/t/p/w500/${imgPath}`,
    getVideo: (id) => axiosService.get(`${category.movie}/${id}/videos${api_key}`),
+   getActors: (id) => axiosService.get(`${category.movie}/${id}/credits${api_key}`),
+   getHomeMovie: (type) => axiosService.get(`${category.movie}${type}${api_key}`),
 
+   //getHomeTV: (type, params) => axiosService.get(),
 }
 
 export {

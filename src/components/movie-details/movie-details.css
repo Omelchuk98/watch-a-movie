@@ -1,5 +1,6 @@
 .movie-details{
-   margin-top: 50px;
+   width: 1300px;
+   margin: 0 auto;
 }
 
 
@@ -21,4 +22,10 @@
 .video_container{
    word-wrap: break-word;
    width: 800px;
+}
+
+.actors-list{
+  
+   display: flex;
+   justify-content:space-evenly;
 }

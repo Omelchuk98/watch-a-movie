@@ -20,6 +20,8 @@ transition-duration: 0.5s;
   
 }
 .poster-title{
+   color:white;
+   text-decoration: none;
    font-weight:400;
    cursor: pointer;
    align-items: center;

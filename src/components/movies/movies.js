@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Outlet } from 'react-router-dom';
 import { movieActions } from '../../redux/slices/movies-slice';
 
 import { Movie } from '../movie/movie';

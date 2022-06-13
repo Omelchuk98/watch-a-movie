@@ -9,8 +9,8 @@ function App() {
          <Route path={'/'} element={<MainLayout />}>
             <Route index element={<Navigate to={"/home"} />} />
             <Route path={"home"} element={<HomePage />} />
-            <Route path={"movies"} element={<MoviesPage />} />
-            <Route path={"movies/:id"} element={<SingleMoviePage />} />
+            <Route path={"movie"} element={<MoviesPage />} />
+            <Route path={"movie/:id"} element={<SingleMoviePage />} />
             <Route path={"tv"} element={<TVPage />} />
             <Route path={"*"} element={<NotFoundPage />} />
          </Route>
