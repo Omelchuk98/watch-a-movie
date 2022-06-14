@@ -17,12 +17,10 @@ const MovieDetails = ({ details }) => {
    useEffect(() => {
       movieService.getVideo(id).then(({ data }) => setVideo(data))
    }, [id])
-   console.log(video)
 
    useEffect(() => {
       movieService.getActors(id).then(({ data }) => setActors(data.cast.slice(0, 7)))
    }, [id])
-   console.log(actors)
 
    let num = () => video.results.find(function (item, index, array) {
       return item.type === 'Trailer';

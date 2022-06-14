@@ -4,3 +4,4 @@ export * from './TVPage/tvpage';
 export * from './SingleTVPage/single-tv-page';
 export * from './HomePage/HomePage';
 export * from './NotFoundPage/notfound-page';
+export * from './SingleActorPage/single-actor-page';

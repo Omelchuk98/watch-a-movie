@@ -1,0 +1,17 @@
+.actor-details__wrapper{
+   width: 1300px;
+   margin: 0 auto;
+}
+.actor-details__container{
+   display: flex;
+   justify-content: space-around;
+   margin-top: 50px;
+}
+
+
+.actor-details__photo{
+   width:350px;
+   height: 500px;
+   margin-right: 110px;
+   
+}

@@ -1,0 +1,26 @@
+.carousel-home__container{
+   display:flex;
+   
+   
+}
+
+.carousel-home__movie-list{
+   display:flex;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+
+.arrow{
+width: 50px;
+height:50px;
+margin-top:150px;
+cursor:pointer;
+}
+.arrow:hover{
+opacity: 0.5;
+}
+
+.rotate{
+transform: rotate(180deg)
+}
