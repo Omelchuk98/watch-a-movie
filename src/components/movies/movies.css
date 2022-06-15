@@ -14,4 +14,47 @@
    grid-template-columns: repeat(5,1fr);
    column-gap: 50px;
    row-gap: 50px;
+   margin-bottom:50px;
+}
+.load-more{
+   margin:0 auto;
+   display: flex;
+text-align: center;
+justify-content:center;
+align-items: center;
+height: 60px;
+padding: 0px 30px;
+text-transform: uppercase;
+letter-spacing: 2px;
+font-size: 18px;
+border-radius: 10px;
+position: relative;
+top: 0;
+}
+.load-more__button{
+   display: flex;
+   text-align: center;
+   justify-content:center;
+   align-items: center;
+   height: 60px;
+   width: 200px;
+   text-transform: uppercase;
+   letter-spacing: 2px;
+   font-size: 18px;
+   border-radius: 10px;
+   position: relative;
+   top: 0;
+   color: #fff;
+   background-color: rgb(102, 100, 100);
+   box-shadow: 0 5px 0px black;
+   transition-duration: 0.5s;
+
+}
+
+.load-more__button:hover{
+   top: 2px;
+   color: black;
+box-shadow: 0 3px 0px black;
+opacity: 0.6;
+cursor: pointer;
 }

@@ -7,7 +7,8 @@ const MovieDetails = ({ details }) => {
    const { id, title, poster_path,
       budget, genres, overview,
       release_date, revenue,
-      runtime, vote_average, production_countries
+      runtime, vote_average, production_countries,
+
    } = details;
 
    const [video, setVideo] = useState(null);

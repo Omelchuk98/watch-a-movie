@@ -3,20 +3,21 @@ import { movieService } from '../../services/movieService';
 
 let initialState = {
    movies: null,
-   details: null,
+   tv: null,
 };
 
 const getPopularMovies = createAsyncThunk(
    'movieSlice/getPopularMovies',
-   async () => {
-      const { data } = await movieService.getPopularMovies();
+   async ({ page }) => {
+      const { data } = await movieService.getPopularMovies(page);
       return data;
    }
 )
-const getMovieById = createAsyncThunk(
-   'movieSlice/getMovieById',
-   async () => {
-      const { data } = await movieService.getMovieById();
+
+const getPopularTV = createAsyncThunk(
+   'movieSlice/getPopularTV',
+   async ({ page }) => {
+      const { data } = await movieService.getPopularTV(page);
       return data;
    }
 )
@@ -32,11 +33,9 @@ const movieSlice = createSlice({
          state.movies = action.payload;
       },
 
-
-      [getMovieById.fulfilled]: (state, action) => {
-         state.details = action.payload;
+      [getPopularTV.fulfilled]: (state, action) => {
+         state.tv = action.payload;
       },
-
    }
 })
 
@@ -44,7 +43,7 @@ const { reducer: movieReducer, actions: { } } = movieSlice;
 
 const movieActions = {
    getPopularMovies,
-   getMovieById,
+   getPopularTV,
 };
 
 export {

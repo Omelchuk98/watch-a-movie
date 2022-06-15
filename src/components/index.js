@@ -9,3 +9,5 @@ export * from './single-actor/single-actor';
 export * from './carousel-home/carousel-home';
 export * from './carousel-card/carousel-card';
 export * from './actor-details/actor-details';
+export * from './tv-details/tv-details';
+
