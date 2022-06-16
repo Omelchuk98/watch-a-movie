@@ -23,6 +23,7 @@ const movieService = {
    getSingleActor: (id) => axiosService.get(`/person/${id}${api_key}`),
    getHomeMovie: (type) => axiosService.get(`${category.movie}${type}${api_key}`),
    getHomeTV: (type) => axiosService.get(`${category.tv}${type}${api_key}`),
+   //searchMovie: () => axiosService.get(`/search${category.movie}`),
 }
 
 export {
