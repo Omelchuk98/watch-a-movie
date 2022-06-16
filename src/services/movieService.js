@@ -22,6 +22,7 @@ const movieService = {
    getActorsTV: (id) => axiosService.get(`${category.tv}/${id}/credits${api_key}`),
    getSingleActor: (id) => axiosService.get(`/person/${id}${api_key}`),
    getHomeMovie: (type) => axiosService.get(`${category.movie}${type}${api_key}`),
+   getHomeTV: (type) => axiosService.get(`${category.tv}${type}${api_key}`),
 }
 
 export {

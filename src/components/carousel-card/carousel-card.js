@@ -6,14 +6,14 @@ import './carousel-card.css';
 
 const CarouselCard = (props) => {
    const item = props.item;
-   const bg = movieService.w500Image(item.poster_path);
+   const bg = movieService.w500Image(item.poster_path || item.backdrop_path);
    const navigate = useNavigate();
    const link = props.category + '/' + item.id;
    return (
       <Link to={link} className='poster-link'>
          <div className="movie-card carousel-card">
             <img src={bg} alt="poster" className="poster-img" />
-            <p className="poster-title">{item.title}</p>
+            <p className="poster-title">{item.title || item.name}</p>
          </div >
       </Link>
    );

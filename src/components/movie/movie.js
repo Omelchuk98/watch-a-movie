@@ -1,6 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
 import { movieService } from "../../services/movieService";
-import icon from './image-not-found.png'
 
 import './movie.css';
 

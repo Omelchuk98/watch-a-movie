@@ -10,7 +10,6 @@ const MovieDetails = ({ details }) => {
       runtime, vote_average, production_countries,
       backdrop_path
    } = details;
-   console.log(details)
    const [video, setVideo] = useState(null);
    const [actors, setActors] = useState([]);
    const bg = movieService.w500Image(poster_path || backdrop_path);

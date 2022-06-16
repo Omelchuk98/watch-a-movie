@@ -26,8 +26,6 @@ const Movies = () => {
       setFilms([...films, ...movies])
       setQuery({ page: `${nextPage}` })
    }
-   console.log(films);
-   console.log(movies);
    return (
       <div className='movies'>
          <div className='movies__container'>

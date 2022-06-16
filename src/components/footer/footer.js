@@ -13,6 +13,9 @@ let link = {
    fb: 'https://www.facebook.com',
    inst: 'https://www.instagram.com',
    imdb: 'https://www.imdb.com/chart/top/',
+   imdb_tv: 'https://www.imdb.com/chart/toptv/',
+   netflix_film: 'https://top10.netflix.com/films',
+   netflix_tv: 'https://top10.netflix.com/tv',
 }
 
 const Footer = () => {
@@ -29,14 +32,20 @@ const Footer = () => {
                <Link to={'/'} className="footer__item">Live</Link>
                <Link to={'/'} className="footer__item">FAQ</Link>
                <Link to={'/'} className="footer__item">Premium</Link>
-               <Link to={'/'} className="footer__item">Pravacy policy</Link>
+               <Link to={'/'} className="footer__item">Privacy policy</Link>
             </div>
             <div className="footer__list">
-               <Link to={'/'} className="footer__item">You must watch</Link>
-               <Link to={'/'} className="footer__item">Recent release</Link>
-               <Link to={'/'} className="footer__item">Upcoming</Link>
+               <a className="footer__item" onClick={() => openInNewTap(link.netflix_film)}>
+                  Top Netflix films
+               </a>
+               <a className="footer__item" onClick={() => openInNewTap(link.netflix_tv)}>
+                  Top Netflix TV
+               </a>
+               <a className="footer__item" onClick={() => openInNewTap(link.imdb_tv)}>
+                  Top IMDB TV
+               </a>
                <a className="footer__item" onClick={() => openInNewTap(link.imdb)}>
-                  Top IMDB
+                  Top IMDB films
                </a>
             </div>
          </div>
