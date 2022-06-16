@@ -15,7 +15,6 @@ const SingleActorPage = () => {
          setActor(state)
       }
    }, [id, state])
-   console.log(actor)
 
    return (
       <div>

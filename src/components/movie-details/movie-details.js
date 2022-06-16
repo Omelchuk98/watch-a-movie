@@ -8,24 +8,21 @@ const MovieDetails = ({ details }) => {
       budget, genres, overview,
       release_date, revenue,
       runtime, vote_average, production_countries,
-
+      backdrop_path
    } = details;
-
+   console.log(details)
    const [video, setVideo] = useState(null);
    const [actors, setActors] = useState([]);
-   const bg = movieService.w500Image(poster_path);
+   const bg = movieService.w500Image(poster_path || backdrop_path);
 
    useEffect(() => {
-      movieService.getVideo(id).then(({ data }) => setVideo(data))
+      movieService.getVideo(id).then(({ data }) => setVideo(data.results.find(item => item.type === 'Trailer')))
    }, [id])
 
    useEffect(() => {
       movieService.getActors(id).then(({ data }) => setActors(data.cast.slice(0, 7)))
    }, [id])
 
-   let num = () => video.results.find(function (item, index, array) {
-      return item.type === 'Trailer';
-   });
 
    return (
       <div className="movie-details">
@@ -43,7 +40,7 @@ const MovieDetails = ({ details }) => {
             </div>
             <div className="video_container">
                {video && <iframe
-                  src={`https://www.youtube.com/embed/${num().key}`}
+                  src={`https://www.youtube.com/embed/${video.key}`}
                   width="800px"
                   height="500px"
                   title="video"></iframe>}

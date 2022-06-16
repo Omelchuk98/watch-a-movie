@@ -7,27 +7,19 @@ import { SingleActor } from "../single-actor/single-actor";
 const TVDetails = ({ details }) => {
    const { id, created_by, episode_run_time, first_air_date, genres,
       name, number_of_episodes, number_of_seasons, overview,
-      poster_path, seasons, status, tagline, vote_average, production_countries
+      poster_path, seasons, status, tagline, vote_average, production_countries, backdrop_path
    } = details;
-   console.log(details)
    const [video, setVideo] = useState(null);
    const [actors, setActors] = useState([]);
-   const bg = movieService.w500Image(poster_path);
+   const bg = movieService.w500Image(poster_path || backdrop_path);
 
    useEffect(() => {
-      movieService.getVideoTV(id).then(({ data }) => setVideo(data))
+      movieService.getVideoTV(id).then(({ data }) => setVideo(data.results.find(item => item.type === 'Trailer')))
    }, [id])
-
-   console.log(video)
 
    useEffect(() => {
       movieService.getActorsTV(id).then(({ data }) => setActors(data.cast.slice(0, 7)))
    }, [id])
-
-
-   let num = () => video.results.find(function (item, index, array) {
-      return item.type === 'Trailer';
-   });
 
 
    return (
@@ -49,7 +41,7 @@ const TVDetails = ({ details }) => {
             </div>
             {<div className="video_container">
                {video && <iframe
-                  src={`https://www.youtube.com/embed/${num().key}`}
+                  src={`https://www.youtube.com/embed/${video.key}`}
                   width="800px"
                   height="500px"
                   title="video"></iframe>}

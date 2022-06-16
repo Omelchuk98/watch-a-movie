@@ -4,12 +4,13 @@ import icon from './image-not-found.png'
 
 import './movie.css';
 
-const Movie = ({ movie: { title, poster_path, id, name } }) => {
-   const bg = movieService.w500Image(poster_path);
+const Movie = ({ movie: { title, poster_path, id, name, backdrop_path } }) => {
+   const bg = movieService.w500Image(poster_path || backdrop_path);
    const navigate = useNavigate();
+
    return (
       <div className="movie-card" onClick={() => navigate(`${id}`)}>
-         <img src={bg || icon} alt="poster" className="poster-img" />
+         {<img src={bg} alt="poster" className="poster-img" />}
          <p className="poster-title">{title || name}</p>
       </div >
    );
