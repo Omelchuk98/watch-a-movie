@@ -2,15 +2,15 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { movieService } from '../../services/movieService';
 
 let initialState = {
-   movies: null,
-   tv: null,
+   movies: [],
+   tv: [],
 };
 
 const getPopularMovies = createAsyncThunk(
    'movieSlice/getPopularMovies',
    async ({ page }) => {
       const { data } = await movieService.getPopularMovies(page);
-      return data;
+      return data.results;
    }
 )
 
@@ -18,7 +18,7 @@ const getPopularTV = createAsyncThunk(
    'movieSlice/getPopularTV',
    async ({ page }) => {
       const { data } = await movieService.getPopularTV(page);
-      return data;
+      return data.results;
    }
 )
 
