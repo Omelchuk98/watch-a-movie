@@ -6,6 +6,7 @@ import { movieService } from "../../services/movieService";
 import { axiosService } from "../../services/axios-service";
 
 import { movieActions } from "../../redux/slices/movies-slice";
+import { Spinner } from "../spinner/spinner";
 
 const TVShows = () => {
    const { tv } = useSelector(state => state.tv);
@@ -13,11 +14,12 @@ const TVShows = () => {
    const [films, setFilms] = useState([]);
 
    const [value, setValue] = useState('');
-   const [filter, setFilter] = useState([]);
+   const [loading, setLoading] = useState(false);
 
    const dispatch = useDispatch();
    useEffect(() => {
-      movieService.getPopularTV().then(({ data }) => setFilms(data.results))
+      movieService.getPopularTV().then(({ data }) => setFilms(data.results));
+      setLoading(true);
    }, [])
    useEffect(() => {
       dispatch(movieActions.getPopularTV({ page: query.get('page') }))
@@ -56,8 +58,8 @@ const TVShows = () => {
          </div>
          <div className='movies__container'>
             <div className='movies-list'>
-               {films &&
-                  films.map((movie) => <Movie key={movie.id} movie={movie} />)}
+               {loading ?
+                  films.map((movie) => <Movie key={movie.id} movie={movie} />) : <Spinner />}
             </div>
          </div>
          <div className='load-more' onClick={() => nextPage()}>

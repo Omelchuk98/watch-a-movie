@@ -14,3 +14,34 @@
    margin-right: 110px;
    
 }
+@media (max-width: 1350px) {
+   .actor-details__photo{
+      margin-right: 50px;
+   }
+   .actor-details__wrapper{
+      width: 1000px;}
+ }
+ @media (max-width: 1050px) {
+   .actor-details__photo{
+      margin-right: 20px;
+   }
+   .actor-details__wrapper{
+      width: 800px;}
+ }
+
+@media (max-width: 850px) {
+   .actor-details__photo{
+      margin-right: 0px;
+   }
+   .actor-details__wrapper{
+      width: 600px;}
+   .actor-details__container{
+     flex-wrap: wrap;
+   }
+ }
+ @media (max-width: 650px) {
+ 
+   .actor-details__wrapper{
+      width: 400px;}
+ 
+ }

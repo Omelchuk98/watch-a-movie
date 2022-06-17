@@ -17,10 +17,11 @@ const Movies = () => {
    const dispatch = useDispatch();
 
    const [value, setValue] = useState('');
-   const [filter, setFilter] = useState([]);
+   const [loading, setLoading] = useState(false);
 
    useEffect(() => {
-      movieService.getPopularMovies().then(({ data }) => setFilms(data.results))
+      movieService.getPopularMovies().then(({ data }) => setFilms(data.results));
+      setLoading(true);
    }, []);
 
    useEffect(() => {
@@ -38,7 +39,6 @@ const Movies = () => {
          `/search/movie?api_key=5c2525c3ff30c51f248cb4c0f55c72ae&language=en-US&query=${value}`);
       setFilms(data.results);
    };
-   console.log(films)
 
    const nextPage = async () => {
       const nextPage = +query.get('page') + 1;
@@ -61,8 +61,8 @@ const Movies = () => {
          </div>
          <div className='movies__container'>
             <div className='movies-list'>
-               {films &&
-                  films.map((movie) => <Movie key={movie.id} movie={movie} />)}
+               {loading ?
+                  films.map((movie) => <Movie key={movie.id} movie={movie} />) : <Spinner />}
             </div>
             <div className='load-more' onClick={() => nextPage()}>
                <div className='load-more__button'>Load more</div>

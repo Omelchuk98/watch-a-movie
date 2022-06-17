@@ -32,13 +32,15 @@ const MovieDetails = ({ details }) => {
          <div className="movie-details__container">
             <div className="poster_container">
                <img src={backdrop_path === null && poster_path === null ? undef : bg} alt="poster" className="movie-details__poster" />
-               <p><b>Production countries</b>: {production_countries.map(item => ` ${item.name},`)}</p>
-               <p><b>Release date</b>: {release_date}</p>
-               <p><b>Budget</b>: {budget}$</p>
-               <p><b>Revenue</b>: {revenue}$</p>
-               <p><b>Genres</b>: {genres.map(item => ` ${item.name},`)}</p>
-               <p><b>Runtime</b>: {runtime}m.</p>
-               <p><b>Average vote</b>: {vote_average}</p>
+               <div>
+                  <p><b>Production countries</b>: {production_countries.map(item => ` ${item.name},`)}</p>
+                  <p><b>Release date</b>: {release_date}</p>
+                  <p><b>Budget</b>: {budget}$</p>
+                  <p><b>Revenue</b>: {revenue}$</p>
+                  <p><b>Genres</b>: {genres.map(item => ` ${item.name},`)}</p>
+                  <p><b>Runtime</b>: {runtime}m.</p>
+                  <p><b>Average vote</b>: {vote_average}</p>
+               </div>
             </div>
             <div className="video_container">
                {video && <iframe
