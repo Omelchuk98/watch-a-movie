@@ -1,6 +1,7 @@
 import { movieService } from "../../services/movieService";
 
 import './actor-details.css';
+import undef from './no-user.jpg';
 
 const ActorDetails = ({ actor }) => {
    const { name, biography, birthday,
@@ -9,7 +10,7 @@ const ActorDetails = ({ actor }) => {
    return (
       <div className="actor-details__wrapper">
          <div className='actor-details__container'>
-            <img src={bg} alt="photo" className='actor-details__photo' />
+            <img src={profile_path === null ? undef : bg} alt="photo" className='actor-details__photo' />
             <div className='actor-details__details'>
                <h1>{name} </h1>
                <p><b>Date of birth</b>: {birthday}</p>

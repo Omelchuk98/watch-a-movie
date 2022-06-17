@@ -3,8 +3,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useSearchParams } from 'react-router-dom';
 import { movieActions } from '../../redux/slices/movies-slice';
 import { movieService } from '../../services/movieService';
-import { useHistory } from 'react-router';
 import { axiosService } from "../../services/axios-service";
+import { Spinner } from '../index';
 
 import { Movie } from '../movie/movie';
 import './movies.css';
@@ -38,7 +38,7 @@ const Movies = () => {
          `/search/movie?api_key=5c2525c3ff30c51f248cb4c0f55c72ae&language=en-US&query=${value}`);
       setFilms(data.results);
    };
-
+   console.log(films)
 
    const nextPage = async () => {
       const nextPage = +query.get('page') + 1;
@@ -53,7 +53,7 @@ const Movies = () => {
                   type='text'
                   placeholder=' '
                   className='textbox'
-                  autocomplete='off'
+                  autoComplete='off'
                   onChange={(event) => setValue(event.target.value)} />
                <label className='form-label'><b>Search</b></label>
                {/* <button onClick={() => fetchSearch()}>Search</button> */}

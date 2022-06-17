@@ -1,7 +1,10 @@
 import { useState, useEffect } from "react";
+
 import { movieService } from "../../services/movieService";
 import { SingleActor } from "../single-actor/single-actor";
+
 import './movie-details.css'
+import undef from './image-not-found.png';
 
 const MovieDetails = ({ details }) => {
    const { id, title, poster_path,
@@ -28,7 +31,7 @@ const MovieDetails = ({ details }) => {
          <h1>{title}</h1>
          <div className="movie-details__container">
             <div className="poster_container">
-               <img src={bg} alt="poster" className="movie-details__poster" />
+               <img src={backdrop_path === null && poster_path === null ? undef : bg} alt="poster" className="movie-details__poster" />
                <p><b>Production countries</b>: {production_countries.map(item => ` ${item.name},`)}</p>
                <p><b>Release date</b>: {release_date}</p>
                <p><b>Budget</b>: {budget}$</p>
