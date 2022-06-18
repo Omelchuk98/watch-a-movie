@@ -5,34 +5,34 @@ import { movieService } from '../../services/movieService';
 
 import arrow from './arrow_back.png';
 
-
 import './carousel-home.css';
 
 const CarouselHome = (props) => {
    const [items, setItems] = useState(null);
    const [first, setFirst] = useState(0);
-   const [second, setSecond] = useState(6);
+   const [second, setSecond] = useState(5);
 
    useEffect(() => {
       movieService.getHomeMovie(props.status).then(({ data }) => setItems(data))
    }, [])
 
+
    const showFirst = () => {
       if (first !== 0) {
          setFirst((firstValue) => firstValue - 1)
       } else setFirst(0);
-      if (second !== 6) {
+      if (second !== 5) {
          setSecond((nextValue) => nextValue - 1)
-      } else setSecond(6);
+      } else setSecond(5);
    }
 
    const showSecond = () => {
-      if (first !== 14) {
+      if (first !== 15) {
          setFirst((firstValue) => firstValue + 1)
       } else setFirst(0);
       if (second !== 20) {
          setSecond((nextValue) => nextValue + 1)
-      } else setSecond(6);
+      } else setSecond(5);
    }
 
    return (
