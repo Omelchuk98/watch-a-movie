@@ -2,3 +2,10 @@
    text-decoration: none;
  
 }
+
+@media (max-width: 1200px) {
+   .carousel-card{
+     margin-right: 20px;
+   }
+}
+

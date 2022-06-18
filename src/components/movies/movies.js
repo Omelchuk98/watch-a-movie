@@ -64,9 +64,9 @@ const Movies = () => {
                {loading ?
                   films.map((movie) => <Movie key={movie.id} movie={movie} />) : <Spinner />}
             </div>
-            <div className='load-more' onClick={() => nextPage()}>
-               <div className='load-more__button'>Load more</div>
-            </div>
+         </div>
+         <div className='load-more' onClick={() => nextPage()}>
+            <div className='load-more__button'>Load more</div>
          </div>
       </div >
    );

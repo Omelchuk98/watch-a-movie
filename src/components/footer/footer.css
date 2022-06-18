@@ -20,7 +20,10 @@
  @media (max-width: 480px) {
    .footer__container {
       display:block;
-      margin-left: 10px;
+      width: 200px;
+   }
+   .footer__list {
+      margin: 0 auto;
    }
  }
 .footer__list {

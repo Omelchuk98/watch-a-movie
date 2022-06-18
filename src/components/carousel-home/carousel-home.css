@@ -10,7 +10,33 @@
   justify-content: space-between;
 }
 
+@media (max-width: 1200px) {
+   .carousel-home__movie-list{
+     max-width: 870px;
+     overflow: hidden;
+     justify-content: space-between;
+     margin:0 auto;
+   }
+}
+@media (max-width: 1030px) {
+   .carousel-home__movie-list{
+     max-width: 650px;
+    
+   }
+}
+@media (max-width: 780px) {
+   .carousel-home__movie-list{
+     max-width: 430px;
+    
+   }
+}
 
+@media (max-width: 550px) {
+   .carousel-home__movie-list{
+     max-width: 210px;
+    
+   }
+}
 .arrow{
 width: 50px;
 height:50px;

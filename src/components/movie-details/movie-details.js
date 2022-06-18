@@ -28,7 +28,7 @@ const MovieDetails = ({ details }) => {
 
    return (
       <div className="movie-details">
-         <h1>{title}</h1>
+         <h1 className="movie-details__title">{title}</h1>
          <div className="movie-details__container">
             <div className="poster_container">
                <img src={backdrop_path === null && poster_path === null ? undef : bg} alt="poster" className="movie-details__poster" />
