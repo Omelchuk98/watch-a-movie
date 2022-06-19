@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/watch-a-movie/static/css/main.2c107988.css",
+    "main.js": "/watch-a-movie/static/js/main.1d1a90aa.js",
+    "static/media/logo.png": "/watch-a-movie/static/media/logo.fa2130e51f83c702bb16.png",
+    "static/media/twitter.svg": "/watch-a-movie/static/media/twitter.46cc1a8b4909e779d8799d9e440ef29c.svg",
+    "static/media/instagram.svg": "/watch-a-movie/static/media/instagram.9e77ed61db69ff713fd83f06a9a29e64.svg",
+    "index.html": "/watch-a-movie/index.html",
+    "static/media/facebook.svg": "/watch-a-movie/static/media/facebook.98b9aacc0de0e73aac3a8b3d77f98cad.svg",
+    "main.2c107988.css.map": "/watch-a-movie/static/css/main.2c107988.css.map",
+    "main.1d1a90aa.js.map": "/watch-a-movie/static/js/main.1d1a90aa.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2c107988.css",
+    "static/js/main.1d1a90aa.js"
+  ]
+}
