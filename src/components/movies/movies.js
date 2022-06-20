@@ -29,9 +29,9 @@ const Movies = () => {
    }, [query]);
 
    useEffect(() => {
-      if (value) {
+      if (value !== '') {
          fetchSearch();
-      }
+      } else movieService.getPopularMovies().then(({ data }) => setFilms(data.results));
    }, [value]);
 
    const fetchSearch = async () => {
@@ -56,7 +56,6 @@ const Movies = () => {
                   autoComplete='off'
                   onChange={(event) => setValue(event.target.value)} />
                <label className='form-label'><b>Search</b></label>
-               {/* <button onClick={() => fetchSearch()}>Search</button> */}
             </div>
          </div>
          <div className='movies__container'>

@@ -26,14 +26,14 @@ const TVShows = () => {
    }, [query]);
 
    useEffect(() => {
-      if (value) {
+      if (value !== '') {
          fetchSearch();
-      }
+      } else movieService.getPopularTV().then(({ data }) => setFilms(data.results));
    }, [value]);
 
    const fetchSearch = async () => {
       const { data } = await axiosService.get(
-         `/search/movie?api_key=5c2525c3ff30c51f248cb4c0f55c72ae&language=en-US&query=${value}`);
+         `/search/tv?api_key=5c2525c3ff30c51f248cb4c0f55c72ae&language=en-US&query=${value}`);
       setFilms(data.results);
    };
 

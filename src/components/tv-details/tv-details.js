@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
+
 import { movieService } from "../../services/movieService";
 import { SingleActor } from "../single-actor/single-actor";
 
+import undef from './image-not-found.png';
 
 
 const TVDetails = ({ details }) => {
@@ -27,7 +29,7 @@ const TVDetails = ({ details }) => {
          <h3>"{tagline}"</h3>
          <div className="movie-details__container">
             <div className="poster_container">
-               <img src={bg} alt="poster" className="movie-details__poster" />
+               <img src={backdrop_path === null && poster_path === null ? undef : bg} alt="poster" className="movie-details__poster" />
                <p><b>Seasons</b>: {number_of_seasons}</p>
                <p><b>Episodes</b>: {number_of_episodes}</p>
                <p><b>Status</b>: {status}</p>

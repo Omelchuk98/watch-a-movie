@@ -2,7 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { movieService } from "../../services/movieService";
 
 import './carousel-card.css';
-
+import undef from './image-not-found.png';
 
 const CarouselCard = (props) => {
    const item = props.item;
@@ -12,7 +12,7 @@ const CarouselCard = (props) => {
    return (
       <Link to={link} className='poster-link'>
          <div className="movie-card carousel-card">
-            <img src={bg} alt="poster" className="poster-img" />
+            <img src={item.poster_path === null && item.backdrop_path === null ? undef : bg} alt="poster" className="poster-img" />
             <p className="poster-title">{item.title || item.name}</p>
          </div >
       </Link>
