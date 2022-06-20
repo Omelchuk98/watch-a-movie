@@ -1,7 +1,5 @@
 .carousel-home__container{
    display:flex;
-   
-   
 }
 
 .carousel-home__movie-list{
@@ -27,14 +25,12 @@
 @media (max-width: 780px) {
    .carousel-home__movie-list{
      max-width: 430px;
-    
    }
 }
 
 @media (max-width: 550px) {
    .carousel-home__movie-list{
      max-width: 210px;
-    
    }
 }
 .arrow{
