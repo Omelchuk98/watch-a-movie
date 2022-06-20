@@ -8,13 +8,13 @@ const Header = () => {
    return (
       <div className="header">
          <div className="header__container">
-            <Link to="home" >
+            <Link to="watch-a-movie" >
                <img src={logo} alt="logo" className="logo__img" />
             </Link>
             <div className="logo__text">Watch a movie <br /> or <br /> be part of one</div>
             <nav className="header__menu">
                <div className="menu__list">
-                  <NavLink to="home" className="menu__item">Home</NavLink>
+                  <NavLink to="watch-a-movie" className="menu__item">Home</NavLink>
                   <NavLink to="movie" className="menu__item">Movies</NavLink>
                   <NavLink to="tv" className="menu__item">TV Shows</NavLink>
                </div>

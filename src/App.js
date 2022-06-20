@@ -10,8 +10,8 @@ function App() {
    return (
       <Routes>
          <Route path={'/'} element={<MainLayout />}>
-            <Route index element={<Navigate to={"/home"} />} />
-            <Route path={"home"} element={<HomePage />} />
+            <Route index element={<Navigate to={"/watch-a-movie"} />} />
+            <Route path={"watch-a-movie"} element={<HomePage />} />
             <Route path={"movie"} element={<MoviesPage />} />
             <Route path={"movie/:id"} element={<SingleMoviePage />} />
             <Route path={"actor/:id"} element={<SingleActorPage />} />
